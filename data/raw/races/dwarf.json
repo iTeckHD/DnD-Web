@@ -1,0 +1,23 @@
+{
+	"race": 1,
+	"raceNameKeyId" : "race.dwarf",
+	"asi": [
+		{ "attribute": 1, "inc": -1  }, 
+		{ "attribute": 1, "inc": 1  }
+	],
+	"age": { 
+		"min": 0, 
+		"max": 350 
+	},
+	"allignment": "",
+	"size": { 
+		"min": 4, 
+		"max": 5 
+	},
+	"speed": 25,
+	"darkvision": true,
+	"stonecunning": true,
+	"resistence": [1,2,3,4,5],
+	"proficency": [1,2,3,4,5, [1,2,3]],
+	"languages": [1,2,3,4]
+}
