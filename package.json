@@ -1,0 +1,30 @@
+{
+  "name": "dnd-web",
+  "version": "1.0.0",
+  "description": "Dungeon and dragons web app",
+  "main": "release/index.html",
+  "dependencies": {
+    "grunt-cli": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iTeckHD/DnD-Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iTeckHD/DnD-Web/issues"
+  },
+  "homepage": "https://github.com/iTeckHD/DnD-Web#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
