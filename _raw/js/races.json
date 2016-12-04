@@ -1,0 +1,51 @@
+{
+	"__TEMPLATE": {
+		"race" : "race.dwarf",
+		"asi": [
+			{ "attribute": 1, "inc": -1  },
+			{ "attribute": 1, "inc": 1  }
+		],
+		"age": {
+			"min": 0, 
+			"adultAt": 120,
+			"max": 350 
+		},
+		"size": { 
+			"min": 4, 
+			"max": 5 
+		},
+		"speed": 0,
+		"resistence": [1,2,3,4,5],
+		"proficency": {
+			"armor": [],
+			"weapon": [],
+			"skills": [],
+			"languages": [],
+		},
+	},
+
+	"1" : {
+		"raceName" : "race.dwarf",
+		"asi": [
+			{ "attribute": 1, "inc": -1  }, 
+			{ "attribute": 1, "inc": 1  }
+		],
+		"age": {
+			"min": 0, 
+			"adultAt": 120,
+			"max": 350 
+		},
+		"size": { 
+			"min": 4, 
+			"max": 5 
+		},
+		"speed": 25,
+		"resistence": [1,2,3,4,5],
+		"proficency": {
+			"armor": [],
+			"weapon": [],
+			"skills": [],
+			"languages": [],
+		},
+	}
+}
