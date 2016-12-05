@@ -7,7 +7,7 @@
 		],
 		"age": {
 			"min": 0, 
-			"adultAt": 120,
+			"adult": 120,
 			"max": 350 
 		},
 		"size": { 
@@ -17,13 +17,12 @@
 		"speed": 0,
 		"resistence": [1,2,3,4,5],
 		"proficency": {
-			"armor": [],
-			"weapon": [],
-			"skills": [],
-			"languages": [],
-		},
+			"armor": [0],
+			"weapon": [0],
+			"skills": [0],
+			"languages": [0]
+		} 
 	},
-
 	"1" : {
 		"raceName" : "race.dwarf",
 		"asi": [
@@ -32,7 +31,7 @@
 		],
 		"age": {
 			"min": 0, 
-			"adultAt": 120,
+			"adult": 120,
 			"max": 350 
 		},
 		"size": { 
@@ -42,10 +41,10 @@
 		"speed": 25,
 		"resistence": [1,2,3,4,5],
 		"proficency": {
-			"armor": [],
-			"weapon": [],
-			"skills": [],
-			"languages": [],
-		},
+			"armor": [0],
+			"weapon": [0],
+			"skills": [0],
+			"languages": [0]
+		}
 	}
 }

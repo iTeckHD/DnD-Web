@@ -1,1 +1,3 @@
-app.js
+(function(){
+	console.log('alo');
+})(); 
