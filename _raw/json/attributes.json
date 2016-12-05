@@ -1,3 +1,10 @@
 {
-	"test": "da"
+	"1": "attributes.strength",
+	"2": "attributes.dexterity",
+	"3": "attributes.constitution",
+	"4": "attributes.intelligence",
+	"5": "attributes.wisdom",
+	"6": "attributes.charisma",
+	"7": "attributes.hitpoints",
+	"8": "attributes.strength"
 }

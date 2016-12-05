@@ -1,0 +1,84 @@
+{
+	"_TEMPLATE": {
+		"name": "spell.template",
+		"cast": null,
+		"range": 30,
+		"components": [],
+		"duration": -1,
+		"description": "",
+		"dmg": [],
+		"buff": [],
+		"maxTargets": 0,
+		"dmgType": 0,
+		"requirement": {
+			"lvl": 0,
+			"feat": []
+		}
+	},
+
+	"1" : {
+		"name": "spell.acidsplash",
+		"cast": { 
+			"amount": 1,
+			"unit": "unit.action"
+		},
+		"components": ["V", "S"],
+		"description": "text",
+		"duration": { "amount": -1, "unit": "unit.instant" },
+		"range": 60,
+		"maxTargets": 2,
+		"dmgType": 1,
+		"dmg": [
+			{ "lvl": 0, "dice": 6, "quantity": 1 },
+			{ "lvl": 5, "dice": 6, "quantity": 2 },
+			{ "lvl": 11, "dice": 6, "quantity": 3 },
+			{ "lvl": 17, "dice": 6, "quantity": 4 }
+		]
+	},
+	"2": {
+		"name": "spell.aid",
+		"cast": { 
+			"amount": 8,
+			"unit": "unit.hours"
+		},
+		"range": 30,
+		"components": ["V", "S", "M"],
+		"description": "W hen you cast this spell using a spell slot of 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd",
+		"duration": { "amount": 8, "unit": "unit.hours" },
+		"maxTargets": 3,
+		"buff": [
+			{ "lvl": 0, "attribute": 7, "inc": 5 }
+		],
+		"higherSlot": [
+			{ "min": 3, "above": 2, "inc": 6 }
+		],
+		"requirement": {
+			"lvl": 2,
+			"feat": [1]
+		}
+	},
+
+	"3": {
+		"name": "spell.alarm",
+		"cast": { "amount": 1, "unit": "unit.minute" },
+		"range": 30,
+		"components": ["V", "S", "M"],
+		"duration": { "amount": 8, "unit": "unit.hours" },
+		"requirement": {
+			"lvl": 1,
+			"feat": [1]
+		}
+	},
+
+	"4": {
+		"name": "spell.alterself",
+		"range": 0,
+		"components": ["V", "S"],
+		"requirement": {
+			"lvl": 2,
+			"feat": [8]
+		}
+	}
+
+
+}
