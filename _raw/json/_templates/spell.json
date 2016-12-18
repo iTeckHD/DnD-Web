@@ -1,0 +1,16 @@
+{
+	"name": "spell.template",
+	"cast": null,
+	"range": 30,
+	"components": [],
+	"duration": -1,
+	"description": "",
+	"dmg": [],
+	"buff": [],
+	"maxTargets": 0,
+	"dmgType": 0,
+	"requirement": {
+		"lvl": 0,
+		"feat": []
+	}
+}

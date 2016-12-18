@@ -1,5 +1,4 @@
 {
-"1": {
 	"race" : "race.dwarf",
 	"asi": [
 		{ "attribute": 1, "inc": -1  },
@@ -22,5 +21,4 @@
 		"skills": [0],
 		"languages": [0]
 	}
-}
 }
