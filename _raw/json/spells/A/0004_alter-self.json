@@ -1,0 +1,22 @@
+{
+	"name": "spell.alter-self",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": -1,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour" 
+	},
+	"description": "You assume a different form. When you cast the spell,\r\nchoose one of the following options, the effects of which\r\nlast for the duration of the spell. While the spell lasts,\r\nyou can end one option as an action to gain the benefits\r\nof a different one.\r\nAquatic Adaptation. You adapt your body to an\r\naquatic environment, sprouting gills and growing\r\nw ebbing between your fingers. You can breathe\r\nunderwater and gain a sw im m ing speed equal to your\r\nwalking speed.\r\nChange Appearance. You transform your appearance.\r\nYou decide what you look like, including your height,\r\nweight, facial features, sound of your voice, hair length,\r\ncoloration, and distinguishing characteristics, if any.\r\nYou can make yourself appear as a member of another\r\nrace, though none of your statistics change. You also\r\ncan’t appear as a creature of a different size than you,\r\nand your basic shape stays the same; if you're bipedal,\r\nyou can’t use this spell to become quadrupedal, for\r\ninstance. At any time for the duration of the spell, you\r\ncan use your action to change your appearance in\r\nthis way again.\r\nNatural Weapons. You grow claws, fangs, spines,\r\nhorns, or a different natural weapon of your choice. Your\r\nunarmed strikes deal 1d6 bludgeoning, piercing, or\r\nslashing damage, as appropriate to the natural weapon\r\nyou chose, and you are proficient with your unarmed\r\nstrikes. Finally, the natural weapon is magic and you\r\nhave a +1 bonus to the attack and damage rolls you\r\nmake using it",
+	"is-ritual": true,
+	"requirement": {
+		"level": 2,
+		"feat": 8
+	}
+}

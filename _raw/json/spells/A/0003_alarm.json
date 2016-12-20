@@ -1,0 +1,23 @@
+{
+	"name": "spell.alarm",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.minutes"
+	},
+	"range": 30,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a tiny bell", "a piece of fine silver wire"]
+	},
+	"duration": { 
+		"amount": 8, 
+		"unit": "unit.hours" 
+	},
+	"description": "You set an alarm against unwanted intrusion. Choose\r\na door, a window, or an area within range that is no\r\nlarger than a 20-foot cube. Until the spell ends, an alarm\r\nalerts you whenever a Tiny or larger creature touches\r\nor enters the warded area. When you cast the spell, you\r\ncan designate creatures that won’t set off the alarm. You\r\nalso choose whether the alarm is mental or audible.\r\nA mental alarm alerts you with a ping in your mind\r\nif you are within 1 mile of the warded area. This ping\r\nawakens you if you are sleeping.\r\nAn audible alarm produces the sound of a hand bell\r\nfor 10 seconds within 60 feet.",
+	"is-ritual": true,
+	"requirement": {
+		"level": 1,
+		"feat": 2
+	}
+}

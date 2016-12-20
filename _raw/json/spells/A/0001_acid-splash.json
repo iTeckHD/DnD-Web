@@ -1,0 +1,29 @@
+{
+	"name": "spell.acid-splash",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 60,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": -1, 
+		"unit": "unit.instant" 
+	},
+	"description": "You hurl a bubble of acid. Choose one creature within\r\nrange, or choose two creatures within range that are\r\nwithin 5 feet o f each other. A target must succeed on a\r\nDexterity saving throw or take 1d6 acid damage.\r\nThis spell’s damage increases by 1d6 when you reach\r\n5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+	"damage": [
+		{ "level": 0, "dice": 6, "quantity": 1 },
+		{ "level": 5, "dice": 6, "quantity": 2 },
+		{ "level": 11, "dice": 6, "quantity": 3 },
+		{ "level": 17, "dice": 6, "quantity": 4 }
+	],
+	"max-targets": 2,
+	"damage-type": 1,
+	"requirement": {
+		"level": 0,
+		"feat": 1
+	}
+}

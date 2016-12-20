@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 	    		tasks: ['jsonlint']
 	    	},
 	    	json_spells : {
-	    		files: ['_raw/json/spells/*'],
+	    		files: ['_raw/json/spells/**/*'],
 	    		tasks: ['json_merge_spells']
 	    	},
 	    	json_classes : {
@@ -92,12 +92,12 @@ module.exports = function(grunt) {
 				src: [ '_raw/json/*.json' ]
 			},
 			spells: {
-				src: [ '_raw/json/spells/*.json' ]
+				src: [ '_raw/json/spells/**/*' ]
 			}
 		}, 
 		json_merge_spells:{
 			build: {
-				src: '_raw/json/spells/*',
+				src: '_raw/json/spells/**/*',
 				target: '_raw/json/spells.json',
 			}
 		},

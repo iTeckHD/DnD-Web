@@ -1,0 +1,30 @@
+{
+	"name": "spell.aid",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a tiny strip of white clothes"]
+	},
+	"duration": { 
+		"amount": 8, 
+		"unit": "unit.hours" 
+	},
+	"description": "Your spell bolsters your allies with toughness and\r\nresolve. Choose up to three creatures within range.\r\nEach target’s hit point maximum and current hit points\r\nincrease by 5 for the duration.\r\nAt Higher Levels. When you cast this spell using\r\na spell slot of 3rd level or higher, a target’s hit points\r\nincrease by an additional 5 for each slot level above 2nd.",
+	"buff": [
+		{ "level": 0, "fixed": 5, "attribute": 7 }
+	],
+	"higher-level-buff":[
+		{ "minlevel": 3, "abovelevel": 2, "eachlevel": 5, "attribute": 7 }
+	],
+	"max-targets": 3,
+	"damage-type": 0,
+	"requirement": {
+		"level": 2,
+		"feat": 2
+	}
+}

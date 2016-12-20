@@ -1,0 +1,22 @@
+{
+	"name": "spell.animal-friendship",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a morsel of food"]
+	},
+	"duration": { 
+		"amount": 24, 
+		"unit": "unit.hours" 
+	},
+	"description": "This spell lets you convince a beast that you mean it no\r\nharm. Choose a beast that you can see within range.\r\nIt must see and hear you. If the beast’s Intelligence is\r\n4 or higher, the spell fails. Otherwise, the beast must\r\nsucceed on a Wisdom saving throw or be charmed\r\nby you for the spell’s duration. If you or one of your\r\ncompanions harms the target, the spells ends.\r\nAt Higher Levels. When you cast this spell using\r\na spell slot of 2nd level or higher, you can affect one\r\nadditional beast for each slot level above 1st.",
+	"requirement": {
+		"level": 1,
+		"feat": 4
+	}
+}

@@ -2,15 +2,16 @@
 	"name": "spell.template",
 	"cast": null,
 	"range": 30,
-	"components": [],
+	"components": {
+		"V": null,
+		"S": null,
+		"M": null
+	},
 	"duration": -1,
 	"description": "",
-	"dmg": [],
-	"buff": [],
-	"maxTargets": 0,
-	"dmgType": 0,
+	"is-ritual": false,
 	"requirement": {
-		"lvl": 0,
+		"level": 0,
 		"feat": []
 	}
 }
