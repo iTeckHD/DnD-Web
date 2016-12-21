@@ -1,1 +1,23 @@
-0013_arcane-eye.json
+{
+	"name": "spell.arcane-eye",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.hour"
+	},
+	"range": 60,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a bit of bat fur"]
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour"
+	},
+	"is-concentration": true,
+	"description": "This spell attracts or repels creatures of your choice.\r\nYou target som ething within range, either a Huge or\r\nsm aller object or creature or an area that is no larger\r\nthan a 200-foot cube. Then specify a kind of intelligent\r\ncreature, such as red dragons, goblins, or vampires.\r\nYou invest the target with an aura that either attracts or\r\nrepels the specified creatures for the duration. Choose\r\nantipathy or sympathy as the aura’s effect.\r\nAntipathy. The enchantment causes creatures of the\r\nkind you designated to feel an intense urge to leave the\r\narea and avoid the target. W hen such a creature can\r\nsee the target or com es within 60 feet of it, the creature\r\nmust succeed on a W isdom saving throw or becom e\r\nfrightened. The creature remains frightened while it can\r\nsee the target or is within 60 feet of it. W hile frightened\r\nby the target, the creature must use its movement to\r\nmove to the nearest safe spot from which it can’t see\r\nthe target. If the creature m oves m ore than 60 feet from\r\nthe target and can’t see it, the creature is no longer\r\nfrightened, but the creature becom es frightened again if\r\nit regains sight of the target or m oves within 60 feet o f it.\r\nSympathy. The enchantment causes the specified\r\ncreatures to feel an intense urge to approach the target\r\nwhile within 60 feet o f it or able to see it. W hen such a\r\ncreature can see the target or com es within 60 feet of it,\r\nthe creature must succeed on a W isdom saving throw or\r\nuse its movement on each o f its turns to enter the area\r\nor move within reach of the target. W hen the creature\r\nhas done so, it can’t willingly m ove away from the target.\r\nIf the target dam ages or otherwise harms an affected\r\ncreature, the affected creature can make a W isdom\r\nsaving throw to end the effect, as described below.\r\nEnding the Effect. If an affected creature ends its\r\nturn while not within 60 feet of the target or able to see\r\nit, the creature m akes a W isdom saving throw. On a\r\nsuccessful save, the creature is no longer affected by\r\nthe target and recognizes the feeling o f repugnance or\r\nattraction as magical. In addition, a creature affected by\r\nthe spell is allowed another W isdom saving throw every\r\n24 hours while the spell persists.\r\nA creature that successfully saves against this effect\r\nis im mune to it for 1 minute, after which time it can be\r\naffected again.",
+	"requirement": {
+		"level": 4,
+		"feature": 3
+	}
+}

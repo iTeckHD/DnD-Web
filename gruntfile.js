@@ -92,24 +92,24 @@ module.exports = function(grunt) {
 				src: [ '_raw/json/*.json' ]
 			},
 			spells: {
-				src: [ '_raw/json/spells/**/*' ]
+				src: [ '_raw/json/spells/**/*.json' ]
 			}
 		}, 
 		json_merge_spells:{
 			build: {
-				src: '_raw/json/spells/**/*',
+				src: '_raw/json/spells/**/*.json',
 				target: '_raw/json/spells.json',
 			}
 		},
 		json_merge_classes:{
 			build: {
-				src: '_raw/json/classes/*',
+				src: '_raw/json/classes/*.json',
 				target: '_raw/json/classes.json',
 			}
 		},
 		json_merge_races:{
 			build: {
-				src: '_raw/json/races/*',
+				src: '_raw/json/races/*.json',
 				target: '_raw/json/races.json',
 			}
 		}

@@ -1,0 +1,14 @@
+{
+	"1": "damage-type.acid",
+	"2": "damage-type.bludgeoning",
+	"3": "damage-type.cold",
+	"4": "damage-type.fire",
+	"5": "damage-type.lightning",
+	"6": "damage-type.necrotic",
+	"7": "damage-type.piercing",
+	"8": "damage-type.poision",
+	"9": "damage-type.psychic",
+	"10": "damage-type.radiant",
+	"11": "damage-type.slashing",
+	"12": "damage-type.thunder"
+}

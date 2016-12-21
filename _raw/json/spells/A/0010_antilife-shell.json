@@ -1,1 +1,22 @@
-0010_antilife-shell.json
+{
+	"name": "spell.antilife-shell",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 10,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour" 
+	},
+	"description": "A shim m ering barrier extends out from you in a 10-foot\r\nradius and m oves with you, remaining centered on\r\nyou and hedging out creatures other than undead and\r\nconstructs. The barrier lasts for the duration.\r\nThe barrier prevents an affected creature from\r\npassing or reaching through. An affected creature\r\ncan cast spells or make attacks with ranged or reach\r\nw eapons through the barrier.\r\nIf you move so that an affected creature is forced to\r\npass through the barrier, the spell ends.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 5,
+		"feature": 1
+	}
+}

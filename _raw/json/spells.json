@@ -1,89 +1,524 @@
 {
-	"_TEMPLATE": {
-		"name": "spell.template",
-		"cast": null,
-		"range": 30,
-		"components": [],
-		"duration": -1,
-		"description": "",
-		"dmg": [],
-		"buff": [],
-		"maxTargets": 0,
-		"dmgType": 0,
-		"requirement": {
-			"lvl": 0,
-			"feat": []
-		}
+"1": {
+	"name": "spell.acid-splash",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
 	},
-
-	"1" : {
-		"name": "spell.acidsplash",
-		"cast": { 
-			"amount": 1,
-			"unit": "unit.action"
-		},
-		"components": ["V", "S"],
-		"components2": {
-			"V": true,
-			"S": null,
-			"M": ["Fade", "Stock"]
-		},
-		"description": "text", 
-		"duration": { "amount": -1, "unit": "unit.instant" },
-		"range": 60,
-		"maxTargets": 2,
-		"dmgType": 1,
-		"dmg": [
-			{ "lvl": 0, "dice": 6, "quantity": 1 },
-			{ "lvl": 5, "dice": 6, "quantity": 2 },
-			{ "lvl": 11, "dice": 6, "quantity": 3 },
-			{ "lvl": 17, "dice": 6, "quantity": 4 }
-		]
+	"range": 60,
+	"components": {
+		"V": true,
+		"S": true
 	},
-	"2": {
-		"name": "spell.aid",
-		"cast": { 
-			"amount": 8,
-			"unit": "unit.hours"
-		},
-		"range": 30,
-		"components": ["V", "S", "M"],
-		"description": "W hen you cast this spell using a spell slot of 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd",
-		"duration": { "amount": 8, "unit": "unit.hours" },
-		"maxTargets": 3,
-		"buff": [
-			{ "lvl": 0, "attribute": 7, "inc": 5 }
-		],
-		"higherSlot": [
-			{ "min": 3, "above": 2, "inc": 6 }
-		],
-		"requirement": {
-			"lvl": 2,
-			"feat": [1]
-		}
+	"duration": { 
+		"amount": -1, 
+		"unit": "unit.instant" 
 	},
-
-	"3": {
-		"name": "spell.alarm",
-		"cast": { "amount": 1, "unit": "unit.minute" },
-		"range": 30,
-		"components": ["V", "S", "M"],
-		"duration": { "amount": 8, "unit": "unit.hours" },
-		"requirement": {
-			"lvl": 1,
-			"feat": [1]
-		}
-	},
-
-	"4": {
-		"name": "spell.alterself",
-		"range": 0,
-		"components": ["V", "S"],
-		"requirement": {
-			"lvl": 2,
-			"feat": [8]
-		}
+	"description": "You hurl a bubble of acid. Choose one creature within\r\nrange, or choose two creatures within range that are\r\nwithin 5 feet o f each other. A target must succeed on a\r\nDexterity saving throw or take 1d6 acid damage.\r\nThis spell’s damage increases by 1d6 when you reach\r\n5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+	"damage": [
+		{ "level": 0, "dice": 6, "quantity": 1 },
+		{ "level": 5, "dice": 6, "quantity": 2 },
+		{ "level": 11, "dice": 6, "quantity": 3 },
+		{ "level": 17, "dice": 6, "quantity": 4 }
+	],
+	"max-targets": 2,
+	"damage-type": 1,
+	"requirement": {
+		"level": 0,
+		"feature": 1
 	}
-
-
+}, 
+"2": {
+	"name": "spell.aid",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a tiny strip of white clothes"]
+	},
+	"duration": { 
+		"amount": 8, 
+		"unit": "unit.hours" 
+	},
+	"description": "Your spell bolsters your allies with toughness and\r\nresolve. Choose up to three creatures within range.\r\nEach target’s hit point maximum and current hit points\r\nincrease by 5 for the duration.\r\nAt Higher Levels. When you cast this spell using\r\na spell slot of 3rd level or higher, a target’s hit points\r\nincrease by an additional 5 for each slot level above 2nd.",
+	"buff": [
+		{ "level": 0, "fixed": 5, "attribute": 7 }
+	],
+	"higher-level-buff":[
+		{ "minlevel": 3, "abovelevel": 2, "eachlevel": 5, "attribute": 7 }
+	],
+	"max-targets": 3,
+	"damage-type": 0,
+	"requirement": {
+		"level": 2,
+		"feature": 2
+	}
+}, 
+"3": {
+	"name": "spell.alarm",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.minutes"
+	},
+	"range": 30,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a tiny bell", "a piece of fine silver wire"]
+	},
+	"duration": { 
+		"amount": 8, 
+		"unit": "unit.hours" 
+	},
+	"description": "You set an alarm against unwanted intrusion. Choose\r\na door, a window, or an area within range that is no\r\nlarger than a 20-foot cube. Until the spell ends, an alarm\r\nalerts you whenever a Tiny or larger creature touches\r\nor enters the warded area. When you cast the spell, you\r\ncan designate creatures that won’t set off the alarm. You\r\nalso choose whether the alarm is mental or audible.\r\nA mental alarm alerts you with a ping in your mind\r\nif you are within 1 mile of the warded area. This ping\r\nawakens you if you are sleeping.\r\nAn audible alarm produces the sound of a hand bell\r\nfor 10 seconds within 60 feet.",
+	"is-ritual": true,
+	"requirement": {
+		"level": 1,
+		"feature": 2
+	}
+}, 
+"4": {
+	"name": "spell.alter-self",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": -1,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour" 
+	},
+	"description": "You assume a different form. When you cast the spell,\r\nchoose one of the following options, the effects of which\r\nlast for the duration of the spell. While the spell lasts,\r\nyou can end one option as an action to gain the benefits\r\nof a different one.\r\nAquatic Adaptation. You adapt your body to an\r\naquatic environment, sprouting gills and growing\r\nw ebbing between your fingers. You can breathe\r\nunderwater and gain a sw im m ing speed equal to your\r\nwalking speed.\r\nChange Appearance. You transform your appearance.\r\nYou decide what you look like, including your height,\r\nweight, facial features, sound of your voice, hair length,\r\ncoloration, and distinguishing characteristics, if any.\r\nYou can make yourself appear as a member of another\r\nrace, though none of your statistics change. You also\r\ncan’t appear as a creature of a different size than you,\r\nand your basic shape stays the same; if you're bipedal,\r\nyou can’t use this spell to become quadrupedal, for\r\ninstance. At any time for the duration of the spell, you\r\ncan use your action to change your appearance in\r\nthis way again.\r\nNatural Weapons. You grow claws, fangs, spines,\r\nhorns, or a different natural weapon of your choice. Your\r\nunarmed strikes deal 1d6 bludgeoning, piercing, or\r\nslashing damage, as appropriate to the natural weapon\r\nyou chose, and you are proficient with your unarmed\r\nstrikes. Finally, the natural weapon is magic and you\r\nhave a +1 bonus to the attack and damage rolls you\r\nmake using it",
+	"is-concentration": true,
+	"requirement": {
+		"level": 2,
+		"feature": 8
+	}
+}, 
+"5": {
+	"name": "spell.animal-friendship",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a morsel of food"]
+	},
+	"duration": { 
+		"amount": 24, 
+		"unit": "unit.hours" 
+	},
+	"description": "This spell lets you convince a beast that you mean it no\r\nharm. Choose a beast that you can see within range.\r\nIt must see and hear you. If the beast’s Intelligence is\r\n4 or higher, the spell fails. Otherwise, the beast must\r\nsucceed on a Wisdom saving throw or be charmed\r\nby you for the spell’s duration. If you or one of your\r\ncompanions harms the target, the spells ends.\r\nAt Higher Levels. When you cast this spell using\r\na spell slot of 2nd level or higher, you can affect one\r\nadditional beast for each slot level above 1st.",
+	"requirement": {
+		"level": 1,
+		"feature": 4
+	}
+}, 
+"6": {
+	"name": "spell.animal-messenger",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a morsel of food"]
+	},
+	"duration": { 
+		"amount": 24, 
+		"unit": "unit.hours" 
+	},
+	"description": "By means of this spell, you use an animal to deliver a\r\nmessage. Choose a Tiny beast you can see within range,\r\nsuch as a squirrel, a blue jay, or a bat. You specify a\r\nlocation, which you must have visited, and a recipient\r\nwho matches a general description, such as “a man or\r\nwoman dressed in the uniform of the town guard” or “a\r\nred-haired dwarf wearing a pointed hat.” You also speak\r\na message of up to twenty-five words. The target beast\r\ntravels for the duration of the spell toward the specified\r\nlocation, covering about 50 miles per 24 hours for a\r\nflying messenger, or 25 miles for other animals.\r\nWhen the messenger arrives, it delivers your message\r\nto the creature that you described, replicating the sound\r\nof your voice. The messenger speaks only to a creature\r\nmatching the description you gave. If the messenger\r\ndoesn’t reach its destination before the spell ends, the\r\nmessage is lost, and the beast makes its way back to\r\nwhere you cast this spell.\r\nAt Higher Levels. If you cast this spell using a spell\r\nslot of 3nd level or higher, the duration of the spell\r\nincreases by 48 hours for each slot level above 2nd.",
+	"is-ritual": true,
+	"requirement": {
+		"level": 1,
+		"feature": 4
+	}
+}, 
+"7": {
+	"name": "spell.animal-shapes",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": 24, 
+		"unit": "unit.hours" 
+	},
+	"description": "Your magic turns others into beasts. Choose any\r\nnumber of willing creatures that you can see within\r\nrange. You transform each target into the form of a\r\nLarge or smaller beast with a challenge rating of 4 or\r\nlower. On subsequent turns, you can use your action to\r\ntransform affected creatures into new forms.\r\nThe transformation lasts for the duration for each\r\ntarget, or until the target drops to 0 hit points or dies.\r\nYou can choose a different form for each target. A\r\ntarget’s game statistics are replaced by the statistics of\r\nthe chosen beast, though the target retains its alignment\r\nand Intelligence, Wisdom , and Charisma scores. The\r\ntarget assumes the hit points of its new form, and when\r\nit reverts to its norm al form, it returns to the number\r\nof hit points it had before it transformed. If it reverts as\r\na result of dropping to 0 hit points, any excess damage\r\ncarries over to its normal form. As long as the excess\r\ndamage doesn’t reduce the creature’s normal form to 0\r\nhit points, it isn’t knocked unconscious. The creature is\r\nlimited in the actions it can perform by the nature of its\r\nnew form, and it can’t speak or cast spells.\r\nThe target’s gear melds into the new form. The target\r\ncan’t activate, wield, or otherwise benefit from any of\r\nits equipment.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 8,
+		"feature": 8
+	}
+}, 
+"8": {
+	"name": "spell.animate-dead",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 10,
+	"components": {
+		"V": true,
+		"S": true, 
+		"M": ["a drop of blood", "a piece of flesh", "a pinch of bone dust"]
+	},
+	"duration": { 
+		"amount": -1, 
+		"unit": "unit.instant" 
+	},
+	"description": "This spell creates an undead servant. Choose a pile\r\nof bones or a corpse of a Medium or Sm all humanoid\r\nwithin range. Your spell im bues the target with a foul\r\nmimicry of life, raising it as an undead creature. The\r\ntarget becomes a skeleton if you chose bones or a\r\nzombie if you chose a corpse (the DM has the creature’s\r\ngame statistics).\r\nOn each of your turns, you can use a bonus action\r\nto mentally command any creature you made with\r\nthis spell if the creature is within 60 feet of you (if you\r\ncontrol multiple creatures, you can command any or all\r\nof them at the same time, issuing the same command to\r\neach one). You decide what action the creature will take\r\nand where it will move during its next turn, or you can\r\nissue a general command, such as to guard a particular\r\nchamber or corridor. If you issue no commands, the\r\ncreature only defends itself against hostile creatures.\r\nOnce given an order, the creature continues to follow it\r\nuntil its task is complete.\r\nThe creature is under your control for 24 hours,\r\nafter which it stops obeying any command you’ve given\r\nit. To maintain control of the creature for another\r\n24 hours, you must cast this spell on the creature\r\nagain before the current 24-hour period ends. This\r\nuse o f the spell reasserts your control over up to four\r\ncreatures you have animated with this spell, rather than\r\nanimating a new one.\r\nAt Higher Levels. W hen you cast this spell using a\r\nspell slot of 4th level or higher, you animate or reassert\r\ncontrol over two additional undead creatures for each\r\nslot level above 3rd. Each of the creatures must come\r\nfrom a different corpse or pile of bones.",
+	"requirement": {
+		"level": 3,
+		"feature": 7
+	}
+}, 
+"9": {
+	"name": "spell.animate-objects",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 120,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.minute" 
+	},
+	"description": "Objects come to life at your command. Choose up to\r\nten nonmagical objects within range that are not being\r\nworn or carried. Medium targets count as two objects,\r\nLarge targets count as four objects, Huge targets\r\ncount as eight objects. You can’t animate any object\r\nlarger than Huge. Each target animates and becomes a\r\ncreature under your control until the spell ends or until\r\nreduced to 0 hit points.\r\nAs a bonus action, you can mentally command any\r\ncreature you made with this spell if the creature is\r\nwithin 500 feet of you (if you control multiple creatures,\r\nyou can command any or all of them at the same time,\r\nissuing the sam e command to each one). You decide\r\nwhat action the creature will take and where it will\r\nmove during its next turn, or you can issue a general\r\ncommand, such as to guard a particular chamber or\r\ncorridor. If you issue no commands, the creature only\r\ndefends itself against hostile creatures. Once given\r\nan order, the creature continues to follow it until its\r\ntask is complete.\r\nAnimated Object Statistics\r\nSize\tHP\tAC\tAttack\tStr\tDex\r\nTiny\t20\t18 +8 to hit,\t1d4 + 4 damage\t4\t18\r\nSmall\t25\t16 +6 to hit,\t1d8 + 2 damage\t6\t14\r\nMedium\t40\t13 +5 to hit,\t2d6 + 1 damage\t10\t12\r\nLarge\t50\t10 +6 to hit,\t2d10 + 2 damage\t14\t10\r\nHuge\t80\t10 +8 to hit,\t2d12 + 4 damage\t18\t6\r\nAn animated object is a construct with AC, hit points,\r\nattacks, Strength, and Dexterity determined by its size.\r\nIts Constitution is 10 and its Intelligence and Wisdom2\r\nare 3, and its Charisma is 1. Its speed is 30 feet; if the\r\nobject lacks legs or other appendages it can use for\r\nlocomotion, it instead has a flying speed of 30 feet and\r\ncan hover. If the object is securely attached to a surface\r\nor a larger object, such as a chain bolted to a wall, its\r\nspeed is 0. It has blindsight with a radius of 30 feet and\r\nis blind beyond that distance. W hen the animated object\r\ndrops to 0 hit points, it reverts to its original object\r\nform, and any remaining damage carries over to its\r\noriginal object form.\r\nIf you command an object to attack, it can make a\r\nsingle melee attack against a creature within 5 feet\r\nof it. It makes a slam attack with an attack bonus and\r\nbludgeoning damage determined by its size. The DM\r\nmight rule that a specific object inflicts slashing or\r\npiercing damage based on its form.\r\nAt Higher Levels. If you cast this spell using a\r\nspell slot of 6th level or higher, you can animate two\r\nadditional objects for each slot level above 5th.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 5,
+		"feature": 8
+	}
+}, 
+"10": {
+	"name": "spell.antilife-shell",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 10,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour" 
+	},
+	"description": "A shim m ering barrier extends out from you in a 10-foot\r\nradius and m oves with you, remaining centered on\r\nyou and hedging out creatures other than undead and\r\nconstructs. The barrier lasts for the duration.\r\nThe barrier prevents an affected creature from\r\npassing or reaching through. An affected creature\r\ncan cast spells or make attacks with ranged or reach\r\nw eapons through the barrier.\r\nIf you move so that an affected creature is forced to\r\npass through the barrier, the spell ends.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 5,
+		"feature": 1
+	}
+}, 
+"11": {
+	"name": "spell.antimagic-field",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 10,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": [["a pinch of powdered iron", "iron filinigs"]]
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour" 
+	},
+	"description": "A 10-foot-radius invisible sphere of antimagic surrounds\r\nyou. This area is divorced from the magical energy that\r\nsuffuses the multiverse. W ithin the sphere, spells can’t\r\nbe cast, sum m oned creatures disappear, and even m agic\r\nitems becom e mundane. Until the spell ends, the sphere\r\nm oves with you, centered on you.\r\nSpells and other magical effects, except those created\r\nby an artifact or a deity, are suppressed in the sphere\r\nand can’t protrude into it. A slot expended to cast\r\na suppressed spell is consum ed. W hile an effect is\r\nsuppressed, it doesn’t function, but the time it spends\r\nsuppressed counts against its duration.\r\nTargeted Effects. Spells and other magical effects,\r\nsuch as magic missile and charm person, that target\r\na creature or an object in the sphere have no effect\r\non that target.\r\nAreas of Magic. The area of another spell or magical\r\neffect, such as fireball, can’t extend into the sphere.\r\nIf the sphere overlaps an area of magic, the part of\r\nthe area that is covered by the sphere is suppressed.\r\nFor example, the flames created by a wall o f fire are\r\nsuppressed within the sphere, creating a gap in the wall\r\nif the overlap is large enough.\r\nSpells. Any active spell or other magical effect on a\r\ncreature or an object in the sphere is suppressed while\r\nthe creature or object is in it.\r\nMagic Items. The properties and pow ers of\r\nm agic items are suppressed in the sphere. For\r\nexample, a + 1 longsword in the sphere functions as a\r\nnonm agical longsword.\r\nA m agic w eapon’s properties and pow ers are\r\nsuppressed if it is used against a target in the sphere or\r\nwielded by an attacker in the sphere. If a m agic w eapon\r\nor a piece of magic ammunition fully leaves the sphere\r\n(for example, if you fire a m agic arrow or throw a magic\r\nspear at a target outside the sphere), the m agic of the\r\nitem ceases to be suppressed as soon as it exits.\r\nMagical Travel. Teleportation and planar travel\r\nfail to w ork in the sphere, whether the sphere is the\r\ndestination or the departure point for such magical\r\ntravel. A portal to another location, world, or plane of\r\nexistence, as well as an opening to an extradim ensional\r\nspace such as that created by the rope trick spell,\r\ntemporarily closes while in the sphere.\r\nCreatures and Objects. A creature or object\r\nsum m oned or created by m agic temporarily w inks out\r\no f existence in the sphere. Such a creature instantly\r\nreappears once the space the creature occupied is no\r\nlonger within the sphere.\r\nDispel Magic. Spells and magical effects such as\r\ndispel magic have no effect on the sphere. Likewise, the\r\nspheres created by different antimagic field spells don’t\r\nnullify each other.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 8,
+		"feature": 1
+	}
+}, 
+"12": {
+	"name": "spell.antipathy-sympathy",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.hour"
+	},
+	"range": 60,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": [["a lump of alum soaked in vinegar for the antipathy", "a drop of honey for the sympathy"]]
+	},
+	"duration": { 
+		"amount": 10, 
+		"unit": "unit.days"
+	},
+	"description": "This spell attracts or repels creatures of your choice.\r\nYou target som ething within range, either a Huge or\r\nsm aller object or creature or an area that is no larger\r\nthan a 200-foot cube. Then specify a kind of intelligent\r\ncreature, such as red dragons, goblins, or vampires.\r\nYou invest the target with an aura that either attracts or\r\nrepels the specified creatures for the duration. Choose\r\nantipathy or sympathy as the aura’s effect.\r\nAntipathy. The enchantment causes creatures of the\r\nkind you designated to feel an intense urge to leave the\r\narea and avoid the target. W hen such a creature can\r\nsee the target or com es within 60 feet of it, the creature\r\nmust succeed on a W isdom saving throw or becom e\r\nfrightened. The creature remains frightened while it can\r\nsee the target or is within 60 feet of it. W hile frightened\r\nby the target, the creature must use its movement to\r\nmove to the nearest safe spot from which it can’t see\r\nthe target. If the creature m oves m ore than 60 feet from\r\nthe target and can’t see it, the creature is no longer\r\nfrightened, but the creature becom es frightened again if\r\nit regains sight of the target or m oves within 60 feet o f it.\r\nSympathy. The enchantment causes the specified\r\ncreatures to feel an intense urge to approach the target\r\nwhile within 60 feet o f it or able to see it. W hen such a\r\ncreature can see the target or com es within 60 feet of it,\r\nthe creature must succeed on a W isdom saving throw or\r\nuse its movement on each o f its turns to enter the area\r\nor move within reach of the target. W hen the creature\r\nhas done so, it can’t willingly m ove away from the target.\r\nIf the target dam ages or otherwise harms an affected\r\ncreature, the affected creature can make a W isdom\r\nsaving throw to end the effect, as described below.\r\nEnding the Effect. If an affected creature ends its\r\nturn while not within 60 feet of the target or able to see\r\nit, the creature m akes a W isdom saving throw. On a\r\nsuccessful save, the creature is no longer affected by\r\nthe target and recognizes the feeling o f repugnance or\r\nattraction as magical. In addition, a creature affected by\r\nthe spell is allowed another W isdom saving throw every\r\n24 hours while the spell persists.\r\nA creature that successfully saves against this effect\r\nis im mune to it for 1 minute, after which time it can be\r\naffected again.",
+	"requirement": {
+		"level": 8,
+		"feature": 4
+	}
+}, 
+"13": {
+	"name": "spell.arcane-eye",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.hour"
+	},
+	"range": 60,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a bit of bat fur"]
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour"
+	},
+	"is-concentration": true,
+	"description": "This spell attracts or repels creatures of your choice.\r\nYou target som ething within range, either a Huge or\r\nsm aller object or creature or an area that is no larger\r\nthan a 200-foot cube. Then specify a kind of intelligent\r\ncreature, such as red dragons, goblins, or vampires.\r\nYou invest the target with an aura that either attracts or\r\nrepels the specified creatures for the duration. Choose\r\nantipathy or sympathy as the aura’s effect.\r\nAntipathy. The enchantment causes creatures of the\r\nkind you designated to feel an intense urge to leave the\r\narea and avoid the target. W hen such a creature can\r\nsee the target or com es within 60 feet of it, the creature\r\nmust succeed on a W isdom saving throw or becom e\r\nfrightened. The creature remains frightened while it can\r\nsee the target or is within 60 feet of it. W hile frightened\r\nby the target, the creature must use its movement to\r\nmove to the nearest safe spot from which it can’t see\r\nthe target. If the creature m oves m ore than 60 feet from\r\nthe target and can’t see it, the creature is no longer\r\nfrightened, but the creature becom es frightened again if\r\nit regains sight of the target or m oves within 60 feet o f it.\r\nSympathy. The enchantment causes the specified\r\ncreatures to feel an intense urge to approach the target\r\nwhile within 60 feet o f it or able to see it. W hen such a\r\ncreature can see the target or com es within 60 feet of it,\r\nthe creature must succeed on a W isdom saving throw or\r\nuse its movement on each o f its turns to enter the area\r\nor move within reach of the target. W hen the creature\r\nhas done so, it can’t willingly m ove away from the target.\r\nIf the target dam ages or otherwise harms an affected\r\ncreature, the affected creature can make a W isdom\r\nsaving throw to end the effect, as described below.\r\nEnding the Effect. If an affected creature ends its\r\nturn while not within 60 feet of the target or able to see\r\nit, the creature m akes a W isdom saving throw. On a\r\nsuccessful save, the creature is no longer affected by\r\nthe target and recognizes the feeling o f repugnance or\r\nattraction as magical. In addition, a creature affected by\r\nthe spell is allowed another W isdom saving throw every\r\n24 hours while the spell persists.\r\nA creature that successfully saves against this effect\r\nis im mune to it for 1 minute, after which time it can be\r\naffected again.",
+	"requirement": {
+		"level": 4,
+		"feature": 3
+	}
+}, 
+"14": {
+	"name": "spell.arcane-gate",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 500,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour"
+	},
+	"is-concentration": true,
+	"description": "You create linked teleportation portals that remain open\r\nfor the duration. C hoose two points on the ground that\r\nyou can see, one point within 10 feet of you and one\r\npoint within 500 feet of you. A circular portal, 10 feet\r\nin diameter, opens over each point. If the portal w ould\r\nopen in the space occupied by a creature, the spell fails,\r\nand the casting is lost.\r\nThe portals are two-dimensional glowing rings\r\nfilled with mist, hovering inches from the ground and\r\nperpendicular to it at the points you choose. A ring is\r\nvisible only from one side (your choice), which is the side\r\nthat functions as a portal.\r\nAny creature or object entering the portal exits from\r\nthe other portal as if the two were adjacent to each\r\nother; passing through a portal from the nonportal side\r\nhas no effect. The mist that fills each portal is opaque\r\nand blocks vision through it. On your turn, you can\r\nrotate the rings as a bonus action so that the active side\r\nfaces in a different direction.",
+	"requirement": {
+		"level": 6,
+		"feature": 2
+	}
+}, 
+"15": {
+	"name": "spell.arcane-lock",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 0,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["gold dust worth at least 25gp"]
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.dispelled"
+	},
+	"description": "You touch a closed door, window, gate, chest, or other\r\nentryway, and it becom es locked for the duration. You\r\nand the creatures you designate when you cast this\r\nspell can open the object normally. You can also set a\r\npassw ord that, when spoken within 5 feet of the object,\r\nsuppresses this spell for 1 minute. Otherwise, it is\r\nim passable until it is broken or the spell is dispelled or\r\nsuppressed. Casting knock on the object suppresses\r\narcane lock for 10 minutes.\r\nW hile affected by this spell, the object is m ore difficult\r\nto break or force open; the DC to break it or pick any\r\nlocks on it increases by 10.",
+	"requirement": {
+		"level": 2,
+		"feature": 1
+	}
+}, 
+"16": {
+	"name": "spell.armor-of-agathys",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": -1,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a cup of water"]
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour"
+	},
+	"description": "A protective m agical force surrounds you, manifesting\r\nas a spectral frost that covers you and your gear.\r\nYou gain 5 tem porary hit points for the duration. If a\r\ncreature hits you with a melee attack while you have\r\nthese hit points, the creature takes 5 cold damage.\r\nA t Higher Levels. W hen you cast this spell using a\r\nspell slot of 2nd level or higher, both the tem porary hit\r\npoints and the cold damage increase by 5 for each slot\r\nlevel above 1st.",
+	"requirement": {
+		"level": 1,
+		"feature": 1
+	}
+}, 
+"17": {
+	"name": "spell.armor-of-hadar",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 10,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.instant"
+	},
+	"description": "You invoke the pow er o f Hadar, the Dark Hunger.\r\nTendrils of dark energy erupt from you and batter all\r\ncreatures within 10 feet of you. Each creature in that\r\narea must m ake a Strength saving throw. On a failed\r\nsave, a target takes 2d6 necrotic damage and can’t take\r\nreactions until its next turn. On a successful save, the\r\ncreature takes half damage, but suffers no other effect.\r\nA t Higher Levels. W hen you cast this spell using a\r\nspell slot of 2nd level or higher, the damage increases by\r\n1d6 for each slot level above 1st.",
+	"requirement": {
+		"level": 1,
+		"feature": 2
+	}
+}, 
+"18": {
+	"name": "spell.astral-projection",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.hour"
+	},
+	"range": 10,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["one jacinth worth at least 1000 gp", "one ornately carved bar of silver worth at least 100gp"]
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.special"
+	},
+	"description": "You and up to eight willing creatures within range\r\nproject your astral bodies into the Astral Plane (the\r\nspell fails and the casting is wasted if you are already\r\non that plane). The material body you leave behind is\r\nu nconscious and in a state of suspended animation; it\r\ndoesn’t need food or air and doesn’t age.\r\nYour astral body resem bles your m ortal form in\r\nalm ost every way, replicating your game statistics and\r\npossessions. The principal difference is the addition of\r\na silvery cord that extends from between your shoulder\r\nblades and trails behind you, fading to invisibility after\r\n1 foot. This cord is your tether to your material body. As\r\nlong as the tether remains intact, you can find your way\r\nhome. If the cord is cut—som ething that can happen\r\nonly when an effect specifically states that it does—your\r\nsoul and body are separated, killing you instantly.\r\nYour astral form can freely travel through the Astral\r\nPlane and can pass through portals there leading to any\r\nother plane. If you enter a new plane or return to the\r\nplane you were on when casting this spell, your body and\r\npossessions are transported along the silver cord, allowing\r\nyou to re-enter your body as you enter the new plane.\r\nYour astral form is a separate incarnation. Any damage\r\nor other effects that apply to it have no effect on your\r\nphysical body, nor do they persist when you return to it.\r\nThe spell ends for you and your com panions when\r\nyou use your action to dism iss it. W hen the spell ends,\r\nthe affected creature returns to its physical body,\r\nand it awakens.\r\nThe spell might also end early for you or one o f your\r\ncom panions. A successful dispel magic spell used\r\nagainst an astral or physical body ends the spell for that\r\ncreature. If a creature’s original body or its astral form\r\ndrops to 0 hit points, the spell ends for that creature. If\r\nthe spell ends and the silver cord is intact, the cord pulls\r\nthe creature’s astral form back to its body, ending its\r\nstate of suspended animation.\r\nIf you are returned to your body prematurely, your\r\ncom panions remain in their astral form s and must find\r\ntheir own way back to their bodies, usually by dropping\r\nto 0 hit points.",
+	"requirement": {
+		"level": 9,
+		"feature": 7
+	}
+}, 
+"19": {
+	"name": "spell.astral-projection",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.minute"
+	},
+	"range": -1,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": [["specially marked sticks", "bones", "similar tokens worth at least 25gp"]]
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.instant"
+	},
+	"description": "By casting gem-inlaid sticks, rolling dragon bones,\r\nlaying out ornate cards, or employing som e other\r\ndivining tool, you receive an om en from an otherworldly\r\nentity about the results of a specific course of action that\r\nyou plan to take within the next 30 minutes. The DM\r\nchooses from the following possible omens:\r\n• Weal, for good results\r\n• Woe, for bad results\r\n• Weal and woe, for both good and bad results\r\n• Nothing, for results that aren’t especially good or bad\r\nThe spell doesn’t take into account any possible\r\ncircum stances that might change the outcom e, such\r\nas the casting of additional spells or the loss or gain\r\no f a com panion.\r\nIf you cast the spell two or m ore times before\r\ncom pleting your next long rest, there is a cumulative 25\r\npercent chance for each casting after the first that you\r\nget a random reading. The DM m akes this roll in secret.",
+	"is-ritual": true,
+	"requirement": {
+		"level": 2,
+		"feature": 3
+	}
+}, 
+"20": {
+	"name": "spell.aura-of-life",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true
+	},
+	"duration": { 
+		"amount": 10, 
+		"unit": "unit.minutes"
+	},
+	"description": "Life-preserving energy radiates from you in an aura with\r\na 30-foot radius. Until the spell ends, the aura m oves\r\nwith you, centered on you. Each nonhostile creature\r\nin the aura (including you) has resistance to necrotic\r\ndamage, and its hit point maximum can't be reduced. In\r\naddition, a nonhostile, living creature regains 1 hit point\r\nwhen it starts its turn in the aura with 0 hit points.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 4,
+		"feature": 1
+	}
+}, 
+"21": {
+	"name": "spell.aura-of-purity",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true
+	},
+	"duration": { 
+		"amount": 10, 
+		"unit": "unit.minutes"
+	},
+	"description": "Purifying energy radiates from you in an aura with a\r\n30-foot radius. Until the spell ends, the aura moves\r\nwith you, centered on you. Each nonhostile creature\r\nin the aura (including you) can’t becom e diseased,\r\nhas resistance to poison damage, and has advantage\r\non saving throws against effects that cause any of the\r\nfollowing conditions: blinded, charm ed, deafened,\r\nfrightened, paralyzed, poisoned, and stunned.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 4,
+		"feature": 1
+	}
+}, 
+"22": {
+	"name": "spell.aura-of-vitality",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.minute"
+	},
+	"description": "H ealing energy radiates from you in an aura with a\r\n30-foot radius. Until the spell ends, the aura m oves with\r\nyou, centered on you. You can use a bonus action to\r\ncause one creature in the aura (including you) to regain\r\n2d6 hit points.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 3,
+		"feature": 5
+	}
+}, 
+"23": {
+	"name": "spell.awaken",
+	"cast": {
+		"amount": 8,
+		"unit": "unit.hours"
+	},
+	"range": 0,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["an agate worth at least 1000 gp"]
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.instant"
+	},
+	"description": "After spending the casting time tracing magical\r\npathways within a precious gemstone, you touch a Huge\r\nor sm aller beast or plant. The target must have either\r\nno Intelligence score or an Intelligence of 3 or less. The\r\ntarget gains an Intelligence of 10. The target also gains\r\nthe ability to speak one language you know. If the target\r\nis a plant, it gains the ability to move its limbs, roots,\r\nvines, creepers, and so forth, and it gains senses similar\r\nto a human’s. Your DM chooses statistics appropriate\r\nfor the awakened plant, such as the statistics for the\r\nawakened shrub or the awakened tree.\r\nThe awakened beast or plant is charm ed by you for\r\n30 days or until you or your com panions do anything\r\nharmful to it. W hen the charm ed condition ends,\r\nthe awakened creature chooses whether to remain\r\nfriendly to you, based on how you treated it while\r\nit w as charmed.",
+	"requirement": {
+		"level": 5,
+		"feature": 8
+	}
+}
 }

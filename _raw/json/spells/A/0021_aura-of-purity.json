@@ -1,1 +1,21 @@
-0021_aura-of-purity.json
+{
+	"name": "spell.aura-of-purity",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true
+	},
+	"duration": { 
+		"amount": 10, 
+		"unit": "unit.minutes"
+	},
+	"description": "Purifying energy radiates from you in an aura with a\r\n30-foot radius. Until the spell ends, the aura moves\r\nwith you, centered on you. Each nonhostile creature\r\nin the aura (including you) can’t becom e diseased,\r\nhas resistance to poison damage, and has advantage\r\non saving throws against effects that cause any of the\r\nfollowing conditions: blinded, charm ed, deafened,\r\nfrightened, paralyzed, poisoned, and stunned.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 4,
+		"feature": 1
+	}
+}

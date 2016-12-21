@@ -1,1 +1,23 @@
-0019_augury.json
+{
+	"name": "spell.astral-projection",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.minute"
+	},
+	"range": -1,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": [["specially marked sticks", "bones", "similar tokens worth at least 25gp"]]
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.instant"
+	},
+	"description": "By casting gem-inlaid sticks, rolling dragon bones,\r\nlaying out ornate cards, or employing som e other\r\ndivining tool, you receive an om en from an otherworldly\r\nentity about the results of a specific course of action that\r\nyou plan to take within the next 30 minutes. The DM\r\nchooses from the following possible omens:\r\n• Weal, for good results\r\n• Woe, for bad results\r\n• Weal and woe, for both good and bad results\r\n• Nothing, for results that aren’t especially good or bad\r\nThe spell doesn’t take into account any possible\r\ncircum stances that might change the outcom e, such\r\nas the casting of additional spells or the loss or gain\r\no f a com panion.\r\nIf you cast the spell two or m ore times before\r\ncom pleting your next long rest, there is a cumulative 25\r\npercent chance for each casting after the first that you\r\nget a random reading. The DM m akes this roll in secret.",
+	"is-ritual": true,
+	"requirement": {
+		"level": 2,
+		"feature": 3
+	}
+}

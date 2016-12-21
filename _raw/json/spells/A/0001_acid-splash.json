@@ -24,6 +24,6 @@
 	"damage-type": 1,
 	"requirement": {
 		"level": 0,
-		"feat": 1
+		"feature": 1
 	}
 }

@@ -1,1 +1,22 @@
-0023_awaken.json
+{
+	"name": "spell.awaken",
+	"cast": {
+		"amount": 8,
+		"unit": "unit.hours"
+	},
+	"range": 0,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["an agate worth at least 1000 gp"]
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.instant"
+	},
+	"description": "After spending the casting time tracing magical\r\npathways within a precious gemstone, you touch a Huge\r\nor sm aller beast or plant. The target must have either\r\nno Intelligence score or an Intelligence of 3 or less. The\r\ntarget gains an Intelligence of 10. The target also gains\r\nthe ability to speak one language you know. If the target\r\nis a plant, it gains the ability to move its limbs, roots,\r\nvines, creepers, and so forth, and it gains senses similar\r\nto a human’s. Your DM chooses statistics appropriate\r\nfor the awakened plant, such as the statistics for the\r\nawakened shrub or the awakened tree.\r\nThe awakened beast or plant is charm ed by you for\r\n30 days or until you or your com panions do anything\r\nharmful to it. W hen the charm ed condition ends,\r\nthe awakened creature chooses whether to remain\r\nfriendly to you, based on how you treated it while\r\nit w as charmed.",
+	"requirement": {
+		"level": 5,
+		"feature": 8
+	}
+}

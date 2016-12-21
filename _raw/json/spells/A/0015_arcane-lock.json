@@ -1,1 +1,22 @@
-0015_arcane-lock.json
+{
+	"name": "spell.arcane-lock",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 0,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["gold dust worth at least 25gp"]
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.dispelled"
+	},
+	"description": "You touch a closed door, window, gate, chest, or other\r\nentryway, and it becom es locked for the duration. You\r\nand the creatures you designate when you cast this\r\nspell can open the object normally. You can also set a\r\npassw ord that, when spoken within 5 feet of the object,\r\nsuppresses this spell for 1 minute. Otherwise, it is\r\nim passable until it is broken or the spell is dispelled or\r\nsuppressed. Casting knock on the object suppresses\r\narcane lock for 10 minutes.\r\nW hile affected by this spell, the object is m ore difficult\r\nto break or force open; the DC to break it or pick any\r\nlocks on it increases by 10.",
+	"requirement": {
+		"level": 2,
+		"feature": 1
+	}
+}

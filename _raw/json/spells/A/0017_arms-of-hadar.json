@@ -1,1 +1,21 @@
-0017_arms-of-hadar.json
+{
+	"name": "spell.armor-of-hadar",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 10,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.instant"
+	},
+	"description": "You invoke the pow er o f Hadar, the Dark Hunger.\r\nTendrils of dark energy erupt from you and batter all\r\ncreatures within 10 feet of you. Each creature in that\r\narea must m ake a Strength saving throw. On a failed\r\nsave, a target takes 2d6 necrotic damage and can’t take\r\nreactions until its next turn. On a successful save, the\r\ncreature takes half damage, but suffers no other effect.\r\nA t Higher Levels. W hen you cast this spell using a\r\nspell slot of 2nd level or higher, the damage increases by\r\n1d6 for each slot level above 1st.",
+	"requirement": {
+		"level": 1,
+		"feature": 2
+	}
+}

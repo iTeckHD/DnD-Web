@@ -1,1 +1,22 @@
-0018_astral-projection.json
+{
+	"name": "spell.astral-projection",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.hour"
+	},
+	"range": 10,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["one jacinth worth at least 1000 gp", "one ornately carved bar of silver worth at least 100gp"]
+	},
+	"duration": { 
+		"amount": null, 
+		"unit": "unit.special"
+	},
+	"description": "You and up to eight willing creatures within range\r\nproject your astral bodies into the Astral Plane (the\r\nspell fails and the casting is wasted if you are already\r\non that plane). The material body you leave behind is\r\nu nconscious and in a state of suspended animation; it\r\ndoesn’t need food or air and doesn’t age.\r\nYour astral body resem bles your m ortal form in\r\nalm ost every way, replicating your game statistics and\r\npossessions. The principal difference is the addition of\r\na silvery cord that extends from between your shoulder\r\nblades and trails behind you, fading to invisibility after\r\n1 foot. This cord is your tether to your material body. As\r\nlong as the tether remains intact, you can find your way\r\nhome. If the cord is cut—som ething that can happen\r\nonly when an effect specifically states that it does—your\r\nsoul and body are separated, killing you instantly.\r\nYour astral form can freely travel through the Astral\r\nPlane and can pass through portals there leading to any\r\nother plane. If you enter a new plane or return to the\r\nplane you were on when casting this spell, your body and\r\npossessions are transported along the silver cord, allowing\r\nyou to re-enter your body as you enter the new plane.\r\nYour astral form is a separate incarnation. Any damage\r\nor other effects that apply to it have no effect on your\r\nphysical body, nor do they persist when you return to it.\r\nThe spell ends for you and your com panions when\r\nyou use your action to dism iss it. W hen the spell ends,\r\nthe affected creature returns to its physical body,\r\nand it awakens.\r\nThe spell might also end early for you or one o f your\r\ncom panions. A successful dispel magic spell used\r\nagainst an astral or physical body ends the spell for that\r\ncreature. If a creature’s original body or its astral form\r\ndrops to 0 hit points, the spell ends for that creature. If\r\nthe spell ends and the silver cord is intact, the cord pulls\r\nthe creature’s astral form back to its body, ending its\r\nstate of suspended animation.\r\nIf you are returned to your body prematurely, your\r\ncom panions remain in their astral form s and must find\r\ntheir own way back to their bodies, usually by dropping\r\nto 0 hit points.",
+	"requirement": {
+		"level": 9,
+		"feature": 7
+	}
+}

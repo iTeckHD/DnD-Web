@@ -1,1 +1,21 @@
-0020_aura-of-life.json
+{
+	"name": "spell.aura-of-life",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true
+	},
+	"duration": { 
+		"amount": 10, 
+		"unit": "unit.minutes"
+	},
+	"description": "Life-preserving energy radiates from you in an aura with\r\na 30-foot radius. Until the spell ends, the aura m oves\r\nwith you, centered on you. Each nonhostile creature\r\nin the aura (including you) has resistance to necrotic\r\ndamage, and its hit point maximum can't be reduced. In\r\naddition, a nonhostile, living creature regains 1 hit point\r\nwhen it starts its turn in the aura with 0 hit points.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 4,
+		"feature": 1
+	}
+}

@@ -1,1 +1,22 @@
-0014_arcane-gate.json
+{
+	"name": "spell.arcane-gate",
+	"cast": { 
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 500,
+	"components": {
+		"V": true,
+		"S": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour"
+	},
+	"is-concentration": true,
+	"description": "You create linked teleportation portals that remain open\r\nfor the duration. C hoose two points on the ground that\r\nyou can see, one point within 10 feet of you and one\r\npoint within 500 feet of you. A circular portal, 10 feet\r\nin diameter, opens over each point. If the portal w ould\r\nopen in the space occupied by a creature, the spell fails,\r\nand the casting is lost.\r\nThe portals are two-dimensional glowing rings\r\nfilled with mist, hovering inches from the ground and\r\nperpendicular to it at the points you choose. A ring is\r\nvisible only from one side (your choice), which is the side\r\nthat functions as a portal.\r\nAny creature or object entering the portal exits from\r\nthe other portal as if the two were adjacent to each\r\nother; passing through a portal from the nonportal side\r\nhas no effect. The mist that fills each portal is opaque\r\nand blocks vision through it. On your turn, you can\r\nrotate the rings as a bonus action so that the active side\r\nfaces in a different direction.",
+	"requirement": {
+		"level": 6,
+		"feature": 2
+	}
+}

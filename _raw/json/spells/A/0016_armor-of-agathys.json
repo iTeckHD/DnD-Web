@@ -1,1 +1,22 @@
-0016_armor-of-agathys
+{
+	"name": "spell.armor-of-agathys",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": -1,
+	"components": {
+		"V": true,
+		"S": true,
+		"M": ["a cup of water"]
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.hour"
+	},
+	"description": "A protective m agical force surrounds you, manifesting\r\nas a spectral frost that covers you and your gear.\r\nYou gain 5 tem porary hit points for the duration. If a\r\ncreature hits you with a melee attack while you have\r\nthese hit points, the creature takes 5 cold damage.\r\nA t Higher Levels. W hen you cast this spell using a\r\nspell slot of 2nd level or higher, both the tem porary hit\r\npoints and the cold damage increase by 5 for each slot\r\nlevel above 1st.",
+	"requirement": {
+		"level": 1,
+		"feature": 1
+	}
+}

@@ -14,8 +14,9 @@
 		"unit": "unit.hours" 
 	},
 	"description": "Your magic turns others into beasts. Choose any\r\nnumber of willing creatures that you can see within\r\nrange. You transform each target into the form of a\r\nLarge or smaller beast with a challenge rating of 4 or\r\nlower. On subsequent turns, you can use your action to\r\ntransform affected creatures into new forms.\r\nThe transformation lasts for the duration for each\r\ntarget, or until the target drops to 0 hit points or dies.\r\nYou can choose a different form for each target. A\r\ntarget’s game statistics are replaced by the statistics of\r\nthe chosen beast, though the target retains its alignment\r\nand Intelligence, Wisdom , and Charisma scores. The\r\ntarget assumes the hit points of its new form, and when\r\nit reverts to its norm al form, it returns to the number\r\nof hit points it had before it transformed. If it reverts as\r\na result of dropping to 0 hit points, any excess damage\r\ncarries over to its normal form. As long as the excess\r\ndamage doesn’t reduce the creature’s normal form to 0\r\nhit points, it isn’t knocked unconscious. The creature is\r\nlimited in the actions it can perform by the nature of its\r\nnew form, and it can’t speak or cast spells.\r\nThe target’s gear melds into the new form. The target\r\ncan’t activate, wield, or otherwise benefit from any of\r\nits equipment.",
+	"is-concentration": true,
 	"requirement": {
 		"level": 8,
-		"feat": 8
+		"feature": 8
 	}
 }

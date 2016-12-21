@@ -18,6 +18,6 @@
 	"is-ritual": true,
 	"requirement": {
 		"level": 1,
-		"feat": 2
+		"feature": 2
 	}
 }

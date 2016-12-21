@@ -1,1 +1,21 @@
-0022_aura-of-vitality.json
+{
+	"name": "spell.aura-of-vitality",
+	"cast": {
+		"amount": 1,
+		"unit": "unit.action"
+	},
+	"range": 30,
+	"components": {
+		"V": true
+	},
+	"duration": { 
+		"amount": 1, 
+		"unit": "unit.minute"
+	},
+	"description": "H ealing energy radiates from you in an aura with a\r\n30-foot radius. Until the spell ends, the aura m oves with\r\nyou, centered on you. You can use a bonus action to\r\ncause one creature in the aura (including you) to regain\r\n2d6 hit points.",
+	"is-concentration": true,
+	"requirement": {
+		"level": 3,
+		"feature": 5
+	}
+}

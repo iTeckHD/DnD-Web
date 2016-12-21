@@ -13,57 +13,10 @@
 		"amount": 1, 
 		"unit": "unit.minute" 
 	},
-	"description": "Objects come to life at your command. Choose up to
-ten nonmagical objects within range that are not being
-worn or carried. Medium targets count as two objects,
-Large targets count as four objects, Huge targets
-count as eight objects. You can’t animate any object
-larger than Huge. Each target animates and becomes a
-creature under your control until the spell ends or until
-reduced to 0 hit points.
-As a bonus action, you can mentally command any
-creature you made with this spell if the creature is
-within 500 feet of you (if you control multiple creatures,
-you can command any or all of them at the same time,
-issuing the sam e command to each one). You decide
-what action the creature will take and where it will
-move during its next turn, or you can issue a general
-command, such as to guard a particular chamber or
-corridor. If you issue no commands, the creature only
-defends itself against hostile creatures. Once given
-an order, the creature continues to follow it until its
-task is complete.
-Animated Object Statistics
-Size HP AC Attack Str Dex
-Tiny 20 18 +8 to hit, 1d4 + 4 damage 4 18
-Small 25 16 +6 to hit, 1d8 + 2 damage 6 14
-Medium 40 13 +5 to hit, 2d6 + 1 damage 10 12
-Large 50 10 +6 to hit, 2d10 + 2 damage 14 10
-Huge 80 10 +8 to hit, 2d12 + 4 damage 18 6
-An animated object is a construct with AC, hit points,
-attacks, Strength, and Dexterity determined by its size.
-Its Constitution is 10 and its Intelligence and Wisdom2
-are 3, and its Charisma is 1. Its speed is 30 feet; if the
-object lacks legs or other appendages it can use for
-locomotion, it instead has a flying speed of 30 feet and
-can hover. If the object is securely attached to a surface
-or a larger object, such as a chain bolted to a wall, its
-speed is 0. It has blindsight with a radius of 30 feet and
-is blind beyond that distance. W hen the animated object
-drops to 0 hit points, it reverts to its original object
-form, and any remaining damage carries over to its
-original object form.
-If you command an object to attack, it can make a
-single melee attack against a creature within 5 feet
-of it. It makes a slam attack with an attack bonus and
-bludgeoning damage determined by its size. The DM
-might rule that a specific object inflicts slashing or
-piercing damage based on its form.
-At Higher Levels. If you cast this spell using a
-spell slot of 6th level or higher, you can animate two
-additional objects for each slot level above 5th.",
+	"description": "Objects come to life at your command. Choose up to\r\nten nonmagical objects within range that are not being\r\nworn or carried. Medium targets count as two objects,\r\nLarge targets count as four objects, Huge targets\r\ncount as eight objects. You can’t animate any object\r\nlarger than Huge. Each target animates and becomes a\r\ncreature under your control until the spell ends or until\r\nreduced to 0 hit points.\r\nAs a bonus action, you can mentally command any\r\ncreature you made with this spell if the creature is\r\nwithin 500 feet of you (if you control multiple creatures,\r\nyou can command any or all of them at the same time,\r\nissuing the sam e command to each one). You decide\r\nwhat action the creature will take and where it will\r\nmove during its next turn, or you can issue a general\r\ncommand, such as to guard a particular chamber or\r\ncorridor. If you issue no commands, the creature only\r\ndefends itself against hostile creatures. Once given\r\nan order, the creature continues to follow it until its\r\ntask is complete.\r\nAnimated Object Statistics\r\nSize\tHP\tAC\tAttack\tStr\tDex\r\nTiny\t20\t18 +8 to hit,\t1d4 + 4 damage\t4\t18\r\nSmall\t25\t16 +6 to hit,\t1d8 + 2 damage\t6\t14\r\nMedium\t40\t13 +5 to hit,\t2d6 + 1 damage\t10\t12\r\nLarge\t50\t10 +6 to hit,\t2d10 + 2 damage\t14\t10\r\nHuge\t80\t10 +8 to hit,\t2d12 + 4 damage\t18\t6\r\nAn animated object is a construct with AC, hit points,\r\nattacks, Strength, and Dexterity determined by its size.\r\nIts Constitution is 10 and its Intelligence and Wisdom2\r\nare 3, and its Charisma is 1. Its speed is 30 feet; if the\r\nobject lacks legs or other appendages it can use for\r\nlocomotion, it instead has a flying speed of 30 feet and\r\ncan hover. If the object is securely attached to a surface\r\nor a larger object, such as a chain bolted to a wall, its\r\nspeed is 0. It has blindsight with a radius of 30 feet and\r\nis blind beyond that distance. W hen the animated object\r\ndrops to 0 hit points, it reverts to its original object\r\nform, and any remaining damage carries over to its\r\noriginal object form.\r\nIf you command an object to attack, it can make a\r\nsingle melee attack against a creature within 5 feet\r\nof it. It makes a slam attack with an attack bonus and\r\nbludgeoning damage determined by its size. The DM\r\nmight rule that a specific object inflicts slashing or\r\npiercing damage based on its form.\r\nAt Higher Levels. If you cast this spell using a\r\nspell slot of 6th level or higher, you can animate two\r\nadditional objects for each slot level above 5th.",
+	"is-concentration": true,
 	"requirement": {
 		"level": 5,
-		"feat": 8
+		"feature": 8
 	}
 }
